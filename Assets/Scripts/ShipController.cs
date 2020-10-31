@@ -85,7 +85,7 @@ public class ShipController : MonoBehaviour
 
 
 
-        MovementClamp();
+        //MovementClamp();
     }
 
     private void FixedUpdate()
@@ -125,7 +125,7 @@ public class ShipController : MonoBehaviour
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 50, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 5, ForceMode2D.Impulse);
 
         }
 
@@ -148,7 +148,7 @@ public class ShipController : MonoBehaviour
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 200, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 20, ForceMode2D.Impulse);
 
         }
 
@@ -177,20 +177,20 @@ public class ShipController : MonoBehaviour
         {
             if(!FX_CageWall.isPlaying) FX_CageWall.Play();
 
-            if(currentMass > 150)
+            if(currentCapacity > 3)
             {
                 //danger
-                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", CageDangerColor);
+                //FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", CageDangerColor);
 
-                if(currentMass > 220)
+                if(currentCapacity > 5)
                 {
-                    CageRelease();
+                    //CageRelease();
                 }
 
             }
             else
             {
-                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", cageColor);
+                //FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", cageColor);
             }
 
         }
@@ -206,7 +206,7 @@ public class ShipController : MonoBehaviour
         cursorDistance = Mathf.Clamp(cursorDistance, 0.1f, 30f);
         rb.AddRelativeForce(Vector3.up * forwardSpeed * (cursorDistance*2));
         currentVelocity = rb.velocity.magnitude;
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), Mathf.Clamp(rb.velocity.y, -5, 5));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -10, 10), Mathf.Clamp(rb.velocity.y, -10, 10));
 
         //damp
 

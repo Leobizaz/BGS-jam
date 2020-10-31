@@ -26,11 +26,11 @@ public class Step1Cargo : MonoBehaviour
             PickUP();
         }
 
-        if (collision.gameObject.tag == "CageCenter" && !picked2)
+        if (collision.gameObject.tag == "CageCenter" && !picked2 && picked)
         {
-            beingPicked = false;
+            //beingPicked = false;
             picked2 = true;
-            col.enabled = true;
+            //col.enabled = true;
             gameObject.layer = 14;
             ShipController.currentCapacity++;
             GameEvents.current.collectCargo(rb.mass);
