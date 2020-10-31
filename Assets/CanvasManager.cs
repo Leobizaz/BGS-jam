@@ -24,12 +24,21 @@ public class CanvasManager : MonoBehaviour
     public GameObject star2;
     public GameObject star3;
 
+    public GameObject failScreen;
+
     private void Update()
     {
         if (!levelDone)
         {
             timeSpan = TimeSpan.FromSeconds(Time.time);
             timerDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+
+            if(timeSpan.Minutes >= 1)
+            {
+                levelDone = true;
+                failScreen.SetActive(true);
+            }
+
         }
         else
         {

@@ -57,7 +57,10 @@ public class Step1Cargo : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (beingPicked)
+        //clamp
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -90.23f, 30.26f), Mathf.Clamp(transform.position.y, -30, 10), 0);
+
+        if (beingPicked || picked2)
         {
             transform.position = new Vector2(
                 Mathf.SmoothDamp(transform.position.x, CageCenter.transform.position.x, ref xVelocity, 0.3f),

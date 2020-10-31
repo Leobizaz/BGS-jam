@@ -38,6 +38,15 @@ public class ShipController : MonoBehaviour
     public Animator shieldAnim;
     public CanvasManager canvas;
     public GameObject popupLose;
+    public GameObject vida1;
+    public GameObject vida2;
+    public GameObject vida3;
+
+    public GameObject clamp1;
+    public GameObject clamp2;
+
+    float hitCooldown;
+
     //referencias privadas
     Rigidbody2D rb;
     HingeJoint2D GravAnchorHinge;
@@ -58,16 +67,19 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
-
-        if (currentLife <= 0)
-        {
-            //ded
-            popupLose.SetActive(true);
-            CanvasManager.levelDone = true;
-        }
-
         if (!CanvasManager.levelDone)
         {
+            if (hitCooldown > 0) hitCooldown -= Time.deltaTime;
+
+            if (currentLife <= 0)
+            {
+                vida1.SetActive(false);
+                vida2.SetActive(false);
+                vida3.SetActive(false);
+                //ded
+                popupLose.SetActive(true);
+                CanvasManager.levelDone = true;
+            }
 
             if (currentCapacity >= 9)
             {
@@ -93,14 +105,15 @@ public class ShipController : MonoBehaviour
                 cursor.transform.position = transform.position;
                 cursor.SetActive(false);
             }
+
+
+            MovementClamp();
         }
         else
         {
             isMoving = false;
         }
 
-
-        //MovementClamp();
     }
 
     private void FixedUpdate()
@@ -136,7 +149,6 @@ public class ShipController : MonoBehaviour
 
         foreach (Collider2D hit in colliders)
         {
-
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
@@ -159,18 +171,21 @@ public class ShipController : MonoBehaviour
 
         foreach (Collider2D hit in colliders)
         {
-            if (hit.GetComponent<Step1Cargo>())
+            int r = Random.Range(0, 3);
+            if (r == 2)
             {
-                Step1Cargo script = hit.gameObject.GetComponent<Step1Cargo>();
-                script.beingPicked = false;
-                script.picked = false;
-                script.picked2 = false;
+                if (hit.GetComponent<Step1Cargo>())
+                {
+                    Step1Cargo script = hit.gameObject.GetComponent<Step1Cargo>();
+                    script.beingPicked = false;
+                    script.picked = false;
+                    script.picked2 = false;
+                }
+                Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+                Vector2 dir = hit.transform.position - explosionPos;
+                if (rb != null)
+                    rb.AddForce(dir.normalized * 1, ForceMode2D.Impulse);
             }
-            Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
-            Vector2 dir = hit.transform.position - explosionPos;
-            if (rb != null)
-                rb.AddForce(dir.normalized * 1, ForceMode2D.Impulse);
-
         }
 
         if (FX_CageWall.isPlaying) FX_CageWall.Stop();
@@ -182,15 +197,37 @@ public class ShipController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Hazard")
+        if (collision.gameObject.tag == "Hazard" && hitCooldown <= 0)
         {
+            hitCooldown = 2;
             shieldAnim.Play("shield_Hit");
             rb.velocity = Vector3.zero;
             rb.angularVelocity = 0;
             CageRelease();
             currentLife--;
+
+            if (currentLife == 3)
+            {
+                vida1.SetActive(true);
+                vida2.SetActive(true);
+                vida3.SetActive(true);
+            }
+            else if (currentLife == 2)
+            {
+                vida1.SetActive(true);
+                vida2.SetActive(true);
+                vida3.SetActive(false);
+            }
+            else if (currentLife == 1)
+            {
+                vida1.SetActive(true);
+                vida2.SetActive(false);
+                vida3.SetActive(false);
+            }
+
         }
     }
+
 
 
     void UpdateCageEmitter(float mass)
@@ -275,8 +312,8 @@ public class ShipController : MonoBehaviour
     void MovementClamp()
     {
         transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -AreaClamp.transform.localScale.x / 2, AreaClamp.transform.localScale.x / 2),
-            Mathf.Clamp(transform.position.y, -AreaClamp.transform.localScale.y / 2, AreaClamp.transform.localScale.y / 2), 0);
+            Mathf.Clamp(transform.position.x, clamp1.transform.position.x, clamp2.transform.position.x),
+            Mathf.Clamp(transform.position.y, clamp2.transform.position.y, clamp1.transform.position.y), 0);
 
 
     }
