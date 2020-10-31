@@ -63,33 +63,41 @@ public class ShipController : MonoBehaviour
         {
             //ded
             popupLose.SetActive(true);
+            CanvasManager.levelDone = true;
         }
 
-        if(currentCapacity >= 9)
+        if (!CanvasManager.levelDone)
         {
-            canvas.ChangeObjetivo("Leve-os para a nave");
-        }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ManualRelease();
-        }
+            if (currentCapacity >= 9)
+            {
+                canvas.ChangeObjetivo("Leve-os para a nave");
+            }
 
-        if (Input.GetMouseButton(0))
-        {
-            isMoving = true;
-            if (!FX_Thruster.isPlaying) FX_Thruster.Play();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ManualRelease();
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                isMoving = true;
+                if (!FX_Thruster.isPlaying) FX_Thruster.Play();
+            }
+            else
+            {
+                if (FX_Thruster.isPlaying) FX_Thruster.Stop();
+                isMoving = false;
+                Freios();
+
+                cursor.transform.position = transform.position;
+                cursor.SetActive(false);
+            }
         }
         else
         {
-            if (FX_Thruster.isPlaying) FX_Thruster.Stop();
             isMoving = false;
-            Freios();
-
-            cursor.transform.position = transform.position;
-            cursor.SetActive(false);
         }
-
 
 
         //MovementClamp();
@@ -132,7 +140,7 @@ public class ShipController : MonoBehaviour
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 5, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 1, ForceMode2D.Impulse);
 
         }
 
@@ -161,7 +169,7 @@ public class ShipController : MonoBehaviour
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 6, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 1, ForceMode2D.Impulse);
 
         }
 

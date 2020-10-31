@@ -20,6 +20,7 @@ public class Dropzone : MonoBehaviour
     {
         if(collected >= 9)
         {
+            CanvasManager.levelDone = true;
             Debug.Log("Win");
             popupWin.SetActive(true);
         }
