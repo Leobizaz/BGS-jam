@@ -32,6 +32,8 @@ public class Step1Cargo : MonoBehaviour
             picked2 = true;
             col.enabled = true;
             gameObject.layer = 14;
+            ShipController.currentCapacity++;
+            GameEvents.current.collectCargo(rb.mass);
         }
     }
 
@@ -64,8 +66,6 @@ public class Step1Cargo : MonoBehaviour
     {
         beingPicked = true;
         col.enabled = false;
-        ShipController.currentCapacity++;
-        GameEvents.current.collectCargo(rb.mass);
     }
 
 }

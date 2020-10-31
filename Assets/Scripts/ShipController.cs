@@ -9,6 +9,7 @@ public class ShipController : MonoBehaviour
     public float breakDecceleration = 1;
     public float rotationSpeed = 150;
     public float maxVelocity = 5;
+    public int currentLife = 3;
     public Color cageColor;
     public Color CageDangerColor;
     [SerializeField] public static int currentCapacity = 0;
@@ -34,6 +35,7 @@ public class ShipController : MonoBehaviour
     public GameObject GravCageCenter;
     public Collider2D gravCageCol;
     public GameObject CageBanish;
+    public Animator shieldAnim;
     //referencias privadas
     Rigidbody2D rb;
     HingeJoint2D GravAnchorHinge;
@@ -54,6 +56,13 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
+
+        if(currentLife <= 0)
+        {
+            //ded
+
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             ManualRelease();
@@ -150,10 +159,15 @@ public class ShipController : MonoBehaviour
         //Invoke("DeactivateBanish", 1.5f);
     }
 
-    void DeactivateBanish()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        CageBanish.SetActive(false);
+        if(collision.gameObject.tag == "Hazard")
+        {
+            shieldAnim.Play("shield_Hit");
+            currentLife--;
+        }
     }
+
 
     void UpdateCageEmitter(float mass)
     {

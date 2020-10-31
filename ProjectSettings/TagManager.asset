@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cursor
   - CageCenter
+  - Hazard
   layers:
   - Default
   - TransparentFX
