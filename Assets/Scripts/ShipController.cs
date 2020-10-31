@@ -9,9 +9,10 @@ public class ShipController : MonoBehaviour
     public float breakDecceleration = 1;
     public float rotationSpeed = 150;
     public float maxVelocity = 5;
-    public Color32 cageColor;
-    public Color32 CageDangerColor;
+    public Color cageColor;
+    public Color CageDangerColor;
     [SerializeField] public static int currentCapacity = 0;
+    public float currentMass = 0;
 
     //variaveis privadas
     [SerializeField] private float currentVelocity;
@@ -24,12 +25,14 @@ public class ShipController : MonoBehaviour
     private bool isMoving;
 
     //referencia publica
-    public ParticleSystem CageWall;
-    public ParticleSystem CageProjection;
     public ParticleSystem FX_Thruster;
+    public ParticleSystem FX_CageWall;
     public GameObject AreaClamp;
     public GameObject cursor;
     public GameObject CM_targetGroup;
+    public GameObject GravCageCenter;
+    public Collider2D gravCageCol;
+    public GameObject CageBanish;
     //referencias privadas
     Rigidbody2D rb;
     HingeJoint2D GravAnchorHinge;
@@ -39,22 +42,38 @@ public class ShipController : MonoBehaviour
         GravAnchorHinge = GetComponent<HingeJoint2D>();
     }
 
+    private void Start()
+    {
+        GameEvents.current.onCollectCargo += AddMass;
+        GameEvents.current.onLoseCargo += LoseMass;
+        GameEvents.current.onLoseCargo += UpdateCageEmitter;
+        GameEvents.current.onCollectCargo += UpdateCageEmitter;
+
+    }
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CageRelease();
+        }
+
         if (Input.GetMouseButton(0))
         {
             isMoving = true;
-            FX_Thruster.Play();
+            if(!FX_Thruster.isPlaying) FX_Thruster.Play();
         }
         else
         {
-            FX_Thruster.Stop();
+            if(FX_Thruster.isPlaying) FX_Thruster.Stop();
             isMoving = false;
             Freios();
 
             cursor.transform.position = transform.position;
             cursor.SetActive(false);
         }
+
+
 
         MovementClamp();
     }
@@ -67,12 +86,75 @@ public class ShipController : MonoBehaviour
             FreeMovement();
 
         }
-
-        HingeClamp();
     }
 
-    void HingeClamp()
+    void AddMass(float mass)
     {
+        gravCageCol.enabled = true;
+        currentMass += mass;
+    }
+
+    void LoseMass(float mass)
+    {
+        currentMass -= mass;
+    }
+
+    void CageRelease()
+    {
+        gravCageCol.enabled = false;
+
+        Vector3 explosionPos = GravCageCenter.transform.position;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, 8);
+
+        Debug.Log(colliders);
+
+        foreach(Collider2D hit in colliders)
+        {
+            Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+                Rigidbody2DExtension.AddExplosionForce(rb, 100, explosionPos, 15, 3);
+        }
+
+
+        //CageBanish.SetActive(true);
+        //Invoke("DeactivateBanish", 1.5f);
+    }
+
+    void DeactivateBanish()
+    {
+        CageBanish.SetActive(false);
+    }
+
+    void UpdateCageEmitter(float mass)
+    {
+        Debug.Log(currentCapacity);
+        Debug.Log(currentMass);
+        if (currentCapacity > 0)
+        {
+            if(!FX_CageWall.isPlaying) FX_CageWall.Play();
+
+            if(currentMass > 150)
+            {
+                //danger
+                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", CageDangerColor);
+
+                if(currentMass > 220)
+                {
+                    CageRelease();
+                }
+
+            }
+            else
+            {
+                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", cageColor);
+            }
+
+        }
+        else
+        {
+            if (FX_CageWall.isPlaying) FX_CageWall.Stop();
+        }
     }
 
     void FreeMovement()

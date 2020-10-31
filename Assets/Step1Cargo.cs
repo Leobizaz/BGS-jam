@@ -7,10 +7,16 @@ public class Step1Cargo : MonoBehaviour
 {
     public GameObject CageCenter;
     bool picked;
+    bool picked2;
     public Collider2D col;
     bool beingPicked;
     float xVelocity;
     float yVelocity;
+    Rigidbody2D rb;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,9 +26,10 @@ public class Step1Cargo : MonoBehaviour
             PickUP();
         }
 
-        if (collision.gameObject.tag == "CageCenter")
+        if (collision.gameObject.tag == "CageCenter" && !picked2)
         {
             beingPicked = false;
+            picked2 = true;
             col.enabled = true;
             gameObject.layer = 14;
         }
@@ -30,13 +37,15 @@ public class Step1Cargo : MonoBehaviour
 
     private void Update()
     {
-        if (picked)
+        if (picked2)
         {
             if (Vector2.Distance(CageCenter.transform.position, this.transform.position) > 5)
             {
+                picked2 = false;
                 picked = false;
                 ShipController.currentCapacity--;
                 gameObject.layer = 0;
+                GameEvents.current.loseCargo(rb.mass);
             }
         }
     }
@@ -53,9 +62,10 @@ public class Step1Cargo : MonoBehaviour
 
     void PickUP()
     {
-        ShipController.currentCapacity++;
         beingPicked = true;
         col.enabled = false;
+        ShipController.currentCapacity++;
+        GameEvents.current.collectCargo(rb.mass);
     }
 
 }
