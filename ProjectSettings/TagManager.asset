@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cursor
+  - CageCenter
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - Wall
   - Triggers
   - Background
-  - 
-  - 
-  - 
+  - Sacola
+  - Player
+  - Wreck
   - 
   - 
   - 
