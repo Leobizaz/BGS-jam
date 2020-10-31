@@ -27,6 +27,7 @@ public class ShipController : MonoBehaviour
     //referencia publica
     public ParticleSystem FX_Thruster;
     public ParticleSystem FX_CageWall;
+    public ParticleSystem FX_Release;
     public GameObject AreaClamp;
     public GameObject cursor;
     public GameObject CM_targetGroup;
@@ -55,7 +56,7 @@ public class ShipController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            CageRelease();
+            ManualRelease();
         }
 
         if (Input.GetMouseButton(0))
@@ -99,22 +100,50 @@ public class ShipController : MonoBehaviour
         currentMass -= mass;
     }
 
+    void ManualRelease()
+    {
+        gravCageCol.enabled = false;
+
+        //FX_Release.Play();
+
+        Vector3 explosionPos = GravCageCenter.transform.position;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, 10);
+
+
+        foreach (Collider2D hit in colliders)
+        {
+
+            Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+            Vector2 dir = hit.transform.position - explosionPos;
+            if (rb != null)
+                rb.AddForce(dir.normalized * 50, ForceMode2D.Impulse);
+
+        }
+
+        if (FX_CageWall.isPlaying) FX_CageWall.Stop();
+    }
+
     void CageRelease()
     {
         gravCageCol.enabled = false;
 
-        Vector3 explosionPos = GravCageCenter.transform.position;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, 8);
+        FX_Release.Play();
 
-        Debug.Log(colliders);
+        Vector3 explosionPos = GravCageCenter.transform.position;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, 10);
+
 
         foreach(Collider2D hit in colliders)
         {
+            
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
-
+            Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                Rigidbody2DExtension.AddExplosionForce(rb, 100, explosionPos, 15, 3);
+                rb.AddForce(dir.normalized * 200, ForceMode2D.Impulse);
+
         }
+
+        if (FX_CageWall.isPlaying) FX_CageWall.Stop();
 
 
         //CageBanish.SetActive(true);
