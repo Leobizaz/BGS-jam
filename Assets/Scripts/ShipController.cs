@@ -36,6 +36,8 @@ public class ShipController : MonoBehaviour
     public Collider2D gravCageCol;
     public GameObject CageBanish;
     public Animator shieldAnim;
+    public CanvasManager canvas;
+    public GameObject popupLose;
     //referencias privadas
     Rigidbody2D rb;
     HingeJoint2D GravAnchorHinge;
@@ -57,10 +59,15 @@ public class ShipController : MonoBehaviour
     private void Update()
     {
 
-        if(currentLife <= 0)
+        if (currentLife <= 0)
         {
             //ded
+            popupLose.SetActive(true);
+        }
 
+        if(currentCapacity >= 9)
+        {
+            canvas.ChangeObjetivo("Leve-os para a nave");
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -71,11 +78,11 @@ public class ShipController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             isMoving = true;
-            if(!FX_Thruster.isPlaying) FX_Thruster.Play();
+            if (!FX_Thruster.isPlaying) FX_Thruster.Play();
         }
         else
         {
-            if(FX_Thruster.isPlaying) FX_Thruster.Stop();
+            if (FX_Thruster.isPlaying) FX_Thruster.Stop();
             isMoving = false;
             Freios();
 
@@ -85,7 +92,7 @@ public class ShipController : MonoBehaviour
 
 
 
-        MovementClamp();
+        //MovementClamp();
     }
 
     private void FixedUpdate()
@@ -125,7 +132,7 @@ public class ShipController : MonoBehaviour
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 50, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 5, ForceMode2D.Impulse);
 
         }
 
@@ -142,13 +149,19 @@ public class ShipController : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, 10);
 
 
-        foreach(Collider2D hit in colliders)
+        foreach (Collider2D hit in colliders)
         {
-            
+            if (hit.GetComponent<Step1Cargo>())
+            {
+                Step1Cargo script = hit.gameObject.GetComponent<Step1Cargo>();
+                script.beingPicked = false;
+                script.picked = false;
+                script.picked2 = false;
+            }
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             Vector2 dir = hit.transform.position - explosionPos;
             if (rb != null)
-                rb.AddForce(dir.normalized * 200, ForceMode2D.Impulse);
+                rb.AddForce(dir.normalized * 6, ForceMode2D.Impulse);
 
         }
 
@@ -161,9 +174,12 @@ public class ShipController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Hazard")
+        if (collision.gameObject.tag == "Hazard")
         {
             shieldAnim.Play("shield_Hit");
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0;
+            CageRelease();
             currentLife--;
         }
     }
@@ -175,22 +191,22 @@ public class ShipController : MonoBehaviour
         Debug.Log(currentMass);
         if (currentCapacity > 0)
         {
-            if(!FX_CageWall.isPlaying) FX_CageWall.Play();
+            if (!FX_CageWall.isPlaying) FX_CageWall.Play();
 
-            if(currentMass > 150)
+            if (currentCapacity > 3)
             {
                 //danger
-                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", CageDangerColor);
+                //FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", CageDangerColor);
 
-                if(currentMass > 220)
+                if (currentCapacity > 5)
                 {
-                    CageRelease();
+                    //CageRelease();
                 }
 
             }
             else
             {
-                FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", cageColor);
+                //FX_CageWall.GetComponent<ParticleSystemRenderer>().material.SetColor("_Color", cageColor);
             }
 
         }
@@ -204,9 +220,9 @@ public class ShipController : MonoBehaviour
     {
         cursorDistance = Vector2.Distance(cursor.transform.position, this.transform.position);
         cursorDistance = Mathf.Clamp(cursorDistance, 0.1f, 30f);
-        rb.AddRelativeForce(Vector3.up * forwardSpeed * (cursorDistance*2));
+        rb.AddRelativeForce(Vector3.up * forwardSpeed * (cursorDistance * 2));
         currentVelocity = rb.velocity.magnitude;
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), Mathf.Clamp(rb.velocity.y, -5, 5));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -10, 10), Mathf.Clamp(rb.velocity.y, -10, 10));
 
         //damp
 
@@ -251,8 +267,8 @@ public class ShipController : MonoBehaviour
     void MovementClamp()
     {
         transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -AreaClamp.transform.localScale.x/2, AreaClamp.transform.localScale.x/2), 
-            Mathf.Clamp(transform.position.y, -AreaClamp.transform.localScale.y/2, AreaClamp.transform.localScale.y/2), 0);
+            Mathf.Clamp(transform.position.x, -AreaClamp.transform.localScale.x / 2, AreaClamp.transform.localScale.x / 2),
+            Mathf.Clamp(transform.position.y, -AreaClamp.transform.localScale.y / 2, AreaClamp.transform.localScale.y / 2), 0);
 
 
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dropzone : MonoBehaviour
 {
-
+    public GameObject popupWin;
     int collected = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +21,7 @@ public class Dropzone : MonoBehaviour
         if(collected >= 9)
         {
             Debug.Log("Win");
+            popupWin.SetActive(true);
         }
     }
 

@@ -6,10 +6,10 @@ using DG.Tweening;
 public class Step1Cargo : MonoBehaviour
 {
     public GameObject CageCenter;
-    bool picked;
-    bool picked2;
+    public bool picked;
+    public bool picked2;
     public Collider2D col;
-    bool beingPicked;
+    public bool beingPicked;
     float xVelocity;
     float yVelocity;
     Rigidbody2D rb;
@@ -20,7 +20,7 @@ public class Step1Cargo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Cursor" && !picked)
+        if (collision.gameObject.tag == "Cursor" && !picked)
         {
             picked = true;
             PickUP();
@@ -28,10 +28,13 @@ public class Step1Cargo : MonoBehaviour
 
         if (collision.gameObject.tag == "CageCenter" && !picked2)
         {
-            beingPicked = false;
+            //beingPicked = false;
             picked2 = true;
-            col.enabled = true;
+            //col.enabled = true;
             gameObject.layer = 14;
+            beingPicked = true;
+
+            col.enabled = false;
             ShipController.currentCapacity++;
             GameEvents.current.collectCargo(rb.mass);
         }
@@ -41,7 +44,7 @@ public class Step1Cargo : MonoBehaviour
     {
         if (picked2)
         {
-            if (Vector2.Distance(CageCenter.transform.position, this.transform.position) > 5)
+            if (Vector2.Distance(CageCenter.transform.position, this.transform.position) > 8)
             {
                 picked2 = false;
                 picked = false;
@@ -57,7 +60,7 @@ public class Step1Cargo : MonoBehaviour
         if (beingPicked)
         {
             transform.position = new Vector2(
-                Mathf.SmoothDamp(transform.position.x, CageCenter.transform.position.x, ref xVelocity, 0.3f), 
+                Mathf.SmoothDamp(transform.position.x, CageCenter.transform.position.x, ref xVelocity, 0.3f),
                 Mathf.SmoothDamp(transform.position.y, CageCenter.transform.position.y, ref yVelocity, 0.3f));
         }
     }
@@ -65,7 +68,6 @@ public class Step1Cargo : MonoBehaviour
     void PickUP()
     {
         beingPicked = true;
-        col.enabled = false;
     }
 
 }
