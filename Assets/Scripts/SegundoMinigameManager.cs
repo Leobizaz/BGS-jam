@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SegundoMinigameManager : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class SegundoMinigameManager : MonoBehaviour
     public GameObject bacia2;
     public GameObject bacia3;
 
+    public GameObject fadeOutScreen;
+
     public Text timerDisplay;
     public Text finalTimeDisplay;
     TimeSpan timeSpan;
@@ -45,8 +48,10 @@ public class SegundoMinigameManager : MonoBehaviour
 
     private void Start()
     {
+        timeSpan = TimeSpan.FromSeconds(0);
         GameEvents.current.onCollectTreco += TrecoColetado;
         GameEvents.current.onCollectWrong += WrongTreco;
+
         wrong1.SetActive(false);
         wrong2.SetActive(false);
         wrong3.SetActive(false);
@@ -61,13 +66,12 @@ public class SegundoMinigameManager : MonoBehaviour
             timeSpan = TimeSpan.FromSeconds(Time.time);
             timerDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
-
-
             if (wrongs >= 3)
             {
                 level2Done = true;
                 loseScreen.SetActive(true);
                 loseScreen.transform.SetAsLastSibling();
+                return;
             }
 
             if(trecosColetados >= 20)
@@ -151,6 +155,31 @@ public class SegundoMinigameManager : MonoBehaviour
         }
 
     }
+
+    public void BotaoVoltarMenu()
+    {
+        fadeOutScreen.SetActive(true);
+        fadeOutScreen.transform.SetAsLastSibling();
+        Invoke("VoltarMenu", 2);
+    }
+
+    public void BotaoNext()
+    {
+        fadeOutScreen.SetActive(true);
+        fadeOutScreen.transform.SetAsLastSibling();
+        Invoke("LoadNext", 2);
+    }
+
+    void VoltarMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    void LoadNext()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 
     public void InstantiateTrecos()
     {

@@ -26,6 +26,11 @@ public class CanvasManager : MonoBehaviour
 
     public GameObject failScreen;
 
+    private void Start()
+    {
+        timeSpan = TimeSpan.FromSeconds(0);
+    }
+
     private void Update()
     {
         if (!levelDone)

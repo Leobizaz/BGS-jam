@@ -15,6 +15,15 @@ public class GameEvents : MonoBehaviour
     public event Action<float> onLoseCargo;
     public event Action<string> onCollectTreco;
     public event Action<int> onCollectWrong;
+    public event Action onGameStart;
+
+    public void startGame()
+    {
+        if(onGameStart != null)
+        {
+            onGameStart();
+        }
+    }
 
     public void collectWrong(int index)
     {
