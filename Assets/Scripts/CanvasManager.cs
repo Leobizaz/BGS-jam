@@ -9,6 +9,8 @@ public class CanvasManager : MonoBehaviour
 {
     public static bool levelDone;
 
+    public GameObject fadeOut;
+
     TimeSpan timeSpan;
 
     private void Awake()
@@ -26,16 +28,18 @@ public class CanvasManager : MonoBehaviour
 
     public GameObject failScreen;
 
+    public float startTime;
+
     private void Start()
     {
-        timeSpan = TimeSpan.FromSeconds(0);
+        startTime = Time.timeSinceLevelLoad;
     }
 
     private void Update()
     {
         if (!levelDone)
         {
-            timeSpan = TimeSpan.FromSeconds(Time.time);
+            timeSpan = TimeSpan.FromSeconds(Time.timeSinceLevelLoad - startTime);
             timerDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
             if(timeSpan.Minutes >= 1)
@@ -73,6 +77,20 @@ public class CanvasManager : MonoBehaviour
     public void ChangeObjetivo(string text)
     {
         objetivoDisplay.text = text;
+    }
+
+    public void ButtonNext()
+    {
+        fadeOut.SetActive(true);
+        fadeOut.transform.SetAsLastSibling();
+        Invoke("GoToNext", 2);
+    }
+
+    public void ButtonMenu()
+    {
+        fadeOut.SetActive(true);
+        fadeOut.transform.SetAsLastSibling();
+        Invoke("GoToMenu", 2);
     }
 
     public void GoToNext()

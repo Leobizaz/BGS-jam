@@ -40,6 +40,7 @@ public class SegundoMinigameManager : MonoBehaviour
     public Text timerDisplay;
     public Text finalTimeDisplay;
     TimeSpan timeSpan;
+    float startTime;
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class SegundoMinigameManager : MonoBehaviour
 
     private void Start()
     {
-        timeSpan = TimeSpan.FromSeconds(0);
+        startTime = Time.timeSinceLevelLoad;
         GameEvents.current.onCollectTreco += TrecoColetado;
         GameEvents.current.onCollectWrong += WrongTreco;
 
@@ -63,7 +64,7 @@ public class SegundoMinigameManager : MonoBehaviour
     {
         if (!level2Done)
         {
-            timeSpan = TimeSpan.FromSeconds(Time.time);
+            timeSpan = TimeSpan.FromSeconds(Time.timeSinceLevelLoad - startTime);
             timerDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
             if (wrongs >= 3)
