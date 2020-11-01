@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 5197999220622739496}
   - component: {fileID: 5197999220622739497}
   - component: {fileID: 5197999220622739494}
-  m_Layer: 22
+  m_Layer: 15
   m_Name: triangulo
   m_TagString: Triangulo
   m_Icon: {fileID: 0}

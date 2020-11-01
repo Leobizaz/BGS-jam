@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position.y < -5)
+        {
+            transform.position = new Vector3(0, -2, 0);
+        }
         Pulo();
         ObjectHandling();
         if (isMoving) playerAnim.SetBool("isMoving", true); else playerAnim.SetBool("isMoving", false);
@@ -80,11 +84,7 @@ public class PlayerController : MonoBehaviour
     {
         if(holdingObject != null)
         {
-            if (holdingObject.GetComponent<Rigidbody2D>())
-            {
-                holdingObject.GetComponent<BoxCollider2D>().enabled = true;
-                holdingObject.GetComponent<Rigidbody2D>().isKinematic = false;
-            }
+            Invoke("DROPAAA", 0.2f);
             if (facingRight)
             {
                 holdingObject.transform.DOMove(new Vector2(transform.position.x + 1, holdingObject.transform.position.y), 0.2f).SetEase(Ease.Linear);
@@ -95,9 +95,18 @@ public class PlayerController : MonoBehaviour
                 holdingObject.transform.DOMove(new Vector2(transform.position.x - 1, holdingObject.transform.position.y), 0.2f).SetEase(Ease.Linear);
                 //holdingObject.transform.position = new Vector2(transform.position.x - 2, holdingObject.transform.position.y);
             }
-            holdingObject = null;
-            handsBusy = false;
         }
+    }
+
+    void DROPAAA()
+    {
+        if (holdingObject.GetComponent<Rigidbody2D>())
+        {
+            holdingObject.GetComponent<BoxCollider2D>().enabled = true;
+            holdingObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        }
+        holdingObject = null;
+        handsBusy = false;
     }
 
     void ObjectHandling()
