@@ -15,8 +15,10 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     RectTransform UI_Element;
     public GameObject position;
     public int index;
+    AudioSource audioS;
     void Awake()
     {
+        audioS = GetComponent<AudioSource>();
         UI_Element = this.GetComponent<RectTransform>();
     }
 
@@ -64,7 +66,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public void Collect(GameObject obj)
     {
-        GameEvents.current.collectTreco(obj.gameObject.tag);
+        audioS.Play();
+        GameEvents.current.collectTreco(index);
         Debug.Log(obj + " coletado");
         obj.GetComponent<BoxCollider2D>().enabled = false;
         obj.GetComponent<DragDrop>().enabled = false;
@@ -75,7 +78,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public void CollectWrong(GameObject obj)
     {
-        GameEvents.current.collectTreco(obj.gameObject.tag);
+        //audioS.Play();
+        GameEvents.current.collectTreco(index);
         GameEvents.current.collectWrong(index);
         Debug.Log(obj + " coletado");
         obj.GetComponent<BoxCollider2D>().enabled = false;
