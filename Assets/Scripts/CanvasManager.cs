@@ -59,21 +59,24 @@ public class CanvasManager : MonoBehaviour
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                FinalScore.estrelasFase1 = 3;
             }
             else if(timeSpan.Seconds <= 34)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                FinalScore.estrelasFase1 = 2;
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                FinalScore.estrelasFase1 = 1;
             }
             finalTimeDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
-
+            FinalScore.tempoFase1 = finalTimeDisplay.text;
             audioS.DOFade(0, 3);
         }
     }

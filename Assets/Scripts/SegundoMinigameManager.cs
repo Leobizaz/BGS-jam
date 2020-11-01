@@ -95,10 +95,11 @@ public class SegundoMinigameManager : MonoBehaviour
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
-
-                if(wrongs > 0)
+                FinalScore.estrelasFase2 = 3;
+                if (wrongs > 0)
                 {
                     star3.SetActive(false);
+                    FinalScore.estrelasFase2 = 2;
                 }
 
             }
@@ -107,19 +108,22 @@ public class SegundoMinigameManager : MonoBehaviour
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
-
-                if(wrongs > 0)
+                FinalScore.estrelasFase2 = 2;
+                if (wrongs > 0)
                 {
                     star2.SetActive(false);
+                    FinalScore.estrelasFase2 = 1;
                 }
             }
             else
             {
+                FinalScore.estrelasFase2 = 1;
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
             finalTimeDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            FinalScore.tempoFase2 = finalTimeDisplay.text;
             audioS.DOFade(0, 3);
         }
     }

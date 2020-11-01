@@ -65,25 +65,29 @@ public class MinigameTRES_Manager : MonoBehaviour
             audioS.DOFade(0, 3);
 
 
-            if (timeSpan.Seconds <= 26)
+            if (timeSpan.Minutes < 1)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                FinalScore.estrelasFase3 = 3;
             }
-            else if (timeSpan.Seconds <= 34)
+            else if (timeSpan.Seconds <= 120)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                FinalScore.estrelasFase3 = 2;
             }
             else
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                FinalScore.estrelasFase3 = 1;
             }
             finalTimeDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            FinalScore.tempoFase3 = finalTimeDisplay.text;
 
         }
     }
