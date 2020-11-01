@@ -13,9 +13,11 @@ public class Step1Cargo : MonoBehaviour
     float xVelocity;
     float yVelocity;
     Rigidbody2D rb;
+    AudioSource audioS;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioS = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,6 +72,7 @@ public class Step1Cargo : MonoBehaviour
 
     void PickUP()
     {
+        audioS.Play();
         beingPicked = true;
     }
 
