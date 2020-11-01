@@ -40,9 +40,9 @@ public class CanvasManager : MonoBehaviour
         if (!levelDone)
         {
             timeSpan = TimeSpan.FromSeconds(Time.timeSinceLevelLoad - startTime);
-            timerDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            timerDisplay.text = timeSpan.Minutes.ToString("00") + ":" + timeSpan.Seconds.ToString("00") + ":" + timeSpan.Milliseconds.ToString("00");
 
-            if(timeSpan.Minutes >= 1)
+            if (timeSpan.Minutes >= 1)
             {
                 levelDone = true;
                 failScreen.SetActive(true);

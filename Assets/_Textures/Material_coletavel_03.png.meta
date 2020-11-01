@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 03f18756d7798d24bb64addf84933c30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -75135650964957952
+    second: Material_coletavel_03_0
+  - first:
+      213: -6090887924422606910
+    second: Material_coletavel_03_1
+  - first:
+      213: -5741355259719819561
+    second: Material_coletavel_03_2
+  - first:
+      213: -3766052498246742705
+    second: Material_coletavel_03_3
+  - first:
+      213: -6290547573090048568
+    second: Material_coletavel_03_4
+  - first:
+      213: 3140486034562461451
+    second: Material_coletavel_03_5
+  - first:
+      213: 1660430860953347918
+    second: Material_coletavel_03_6
+  - first:
+      213: 8441362244830681436
+    second: Material_coletavel_03_7
+  - first:
+      213: -6048330387832967090
+    second: Material_coletavel_03_8
+  - first:
+      213: 1118055723977962472
+    second: Material_coletavel_03_9
+  - first:
+      213: -4492068991998787678
+    second: Material_coletavel_03_10
+  - first:
+      213: -5821862701649331163
+    second: Material_coletavel_03_11
+  - first:
+      213: 6674653950668941242
+    second: Material_coletavel_03_12
+  - first:
+      213: -3824344517227060799
+    second: Material_coletavel_03_13
+  - first:
+      213: 3169594278960019037
+    second: Material_coletavel_03_14
+  - first:
+      213: -1163145477709115913
+    second: Material_coletavel_03_15
+  - first:
+      213: -7262711609936991927
+    second: Material_coletavel_03_16
+  - first:
+      213: 6812703023232643645
+    second: Material_coletavel_03_17
+  - first:
+      213: 5281393859619367083
+    second: Material_coletavel_03_18
+  - first:
+      213: 2468063622850903862
+    second: Material_coletavel_03_19
+  - first:
+      213: 166510312155537805
+    second: Material_coletavel_03_20
+  - first:
+      213: 5889223219262811801
+    second: Material_coletavel_03_21
+  - first:
+      213: 82044178051145763
+    second: Material_coletavel_03_22
+  - first:
+      213: -8979377439161475759
+    second: Material_coletavel_03_23
+  - first:
+      213: -2945112635797103568
+    second: Material_coletavel_03_24
+  - first:
+      213: -6393823459313564088
+    second: Material_coletavel_03_25
+  - first:
+      213: 3420855975051621677
+    second: Material_coletavel_03_26
+  - first:
+      213: 7170895544822780228
+    second: Material_coletavel_03_27
+  - first:
+      213: -1330492509415775878
+    second: Material_coletavel_03_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Material_coletavel_03_0
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 463
+        width: 101
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0051446068015fef0800000000000000
+      internalID: -75135650964957952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_1
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 327
+        width: 118
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cff21224b1d87ba0800000000000000
+      internalID: -6090887924422606910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 380
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de541f6fcb9250b0800000000000000
+      internalID: -5741355259719819561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 243
+        width: 98
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dc78cc43b4cbbc0800000000000000
+      internalID: -3766052498246742705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_4
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 157
+        width: 108
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5a54f9f4c73b8a0800000000000000
+      internalID: -6290547573090048568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 295
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fab20d86f359b20800000000000000
+      internalID: 3140486034562461451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Material_coletavel_03_7
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 188
+        width: 98
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59d687cc3eb52570800000000000000
+      internalID: 8441362244830681436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

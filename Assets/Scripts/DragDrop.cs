@@ -7,6 +7,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    Vector3 screenBounds;
 
     private void Awake()
     {
@@ -15,6 +16,16 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             rectTransform = GetComponent<RectTransform>();
             canvasGroup = GetComponent<CanvasGroup>();
         }
+    }
+
+    private void Start()
+    {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -screenBounds.x, screenBounds.x), Mathf.Clamp(transform.position.y, -screenBounds.y, screenBounds.y), 0);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
