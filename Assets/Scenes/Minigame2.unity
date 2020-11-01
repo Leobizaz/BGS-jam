@@ -1436,6 +1436,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184973905}
   m_CullTransparentMesh: 0
+--- !u!1 &215700774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215700775}
+  - component: {fileID: 215700776}
+  m_Layer: 0
+  m_Name: dialogo5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &215700775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215700774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &215700776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215700774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: But you think that's all? No, now we need to separate each one of them.
+      Would you like to help????
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: "Mas voc\xEA pensa que \xE9 s\xF3 trazer eles aqui? N\xE3o, agora precisamos
+      separar cada um deles. Gostaria de ajudar??"
+    Object: {fileID: 0}
 --- !u!224 &231012836 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 420075407868292201, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
@@ -1972,6 +2025,57 @@ Transform:
   m_Father: {fileID: 274557998}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &324006763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324006764}
+  - component: {fileID: 324006765}
+  m_Layer: 0
+  m_Name: dica2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324006764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324006763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &324006765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324006763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Click and drag to move the objects.
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Clique e arraste para mover os objetos
+    Object: {fileID: 0}
 --- !u!1 &336611112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2138,7 @@ GameObject:
   - component: {fileID: 347516235}
   - component: {fileID: 347516237}
   - component: {fileID: 347516236}
+  - component: {fileID: 347516238}
   m_Layer: 5
   m_Name: TXT_Objetivo (1)
   m_TagString: Untagged
@@ -2102,6 +2207,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347516234}
   m_CullTransparentMesh: 0
+--- !u!114 &347516238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347516234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: dica2
+  FallbackText: Clique e arraste para mover os objetos
 --- !u!1 &385758858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2232,7 @@ GameObject:
   - component: {fileID: 385758859}
   - component: {fileID: 385758861}
   - component: {fileID: 385758860}
+  - component: {fileID: 385758862}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2181,6 +2301,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385758858}
   m_CullTransparentMesh: 0
+--- !u!114 &385758862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385758858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Pause
+  FallbackText: 
 --- !u!1 &412704164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,6 +2829,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 420075408177658913, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2794,6 +2932,10 @@ PrefabInstance:
     - target: {fileID: 420075408664898457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_FontData.m_BestFit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 420075408924671002, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 420075409094569194, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
@@ -3012,7 +3154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo2
-  FallbackText: 
+  FallbackText: Fiz o meu melhor!!
 --- !u!114 &524080645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3026,7 +3168,160 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo1
+  FallbackText: Que maravilha, olha quantos materiais!!
+--- !u!1 &524080646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4773567351335465729, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075407496287258, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075409094569196, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075409533681578, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075407451328004, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075409192159449, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075408325784804, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &524080653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 420075408372526093, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+  m_PrefabInstance: {fileID: 524080639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &524080654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Intrutor
+  FallbackText: Instrutor
+--- !u!114 &524080655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: dialogo6
   FallbackText: 
+--- !u!114 &524080656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: dialogo5
+  FallbackText: 
+--- !u!114 &524080657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Prox
+  FallbackText: 
+--- !u!114 &524080658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: dialogo5
+  FallbackText: "Mas voc\xEA pensa que \xE9 s\xF3 trazer eles aqui? N\xE3o, agora
+    precisamos separar cada um deles. Gostaria de ajudar??"
+--- !u!114 &524080659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Prox
+  FallbackText: "Pr\xF3ximo"
+--- !u!114 &524080660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Prox
+  FallbackText: 
+--- !u!114 &524080661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524080653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Prox
+  FallbackText: "Pr\xF3ximo"
 --- !u!1 &524191505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,6 +3439,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5194418816278217313, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
   m_PrefabInstance: {fileID: 5194418815733158911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &596629090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596629091}
+  - component: {fileID: 596629092}
+  m_Layer: 0
+  m_Name: Intrutor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596629091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596629090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596629092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596629090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Instructor
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Intrutor
+    Object: {fileID: 0}
 --- !u!1 &604860028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3599,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.01616779}
   m_EdgeRadius: 0
+--- !u!1 &638325055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638325056}
+  - component: {fileID: 638325057}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638325056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638325055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638325057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638325055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: '..:::   Paused   :::..'
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: '..:::   Jogo pausado   :::..'
+    Object: {fileID: 0}
 --- !u!1 &644567003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5194418816163650596, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
@@ -3609,10 +4006,10 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: English
-    Text: You failed the flight test
+    Text: "\rYou have not separated the junk in its proper places"
     Object: {fileID: 0}
   - Language: Portuguese
-    Text: "Voc\xEA fracassou no teste de habilita\xE7\xE3o"
+    Text: "Voc\xEA n\xE3o separou as tralhas em seus devidos lugares"
     Object: {fileID: 0}
 --- !u!224 &852004517 stripped
 RectTransform:
@@ -4425,6 +4822,7 @@ GameObject:
   - component: {fileID: 1293265489}
   - component: {fileID: 1293265491}
   - component: {fileID: 1293265490}
+  - component: {fileID: 1293265492}
   m_Layer: 5
   m_Name: TXT_Objetivo
   m_TagString: Untagged
@@ -4493,6 +4891,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293265488}
   m_CullTransparentMesh: 0
+--- !u!114 &1293265492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293265488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: dica1
+  FallbackText: Separe os materiais
 --- !u!1 &1300349234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,6 +5460,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371477072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371477073}
+  - component: {fileID: 1371477074}
+  m_Layer: 0
+  m_Name: dialogo6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371477073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371477072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371477074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371477072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Sure, i'd love to.
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Claro, adoraria!!
+    Object: {fileID: 0}
 --- !u!1 &1380130425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,6 +5886,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483714491}
   m_CullTransparentMesh: 0
+--- !u!1 &1517791084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517791085}
+  - component: {fileID: 1517791086}
+  m_Layer: 0
+  m_Name: dica1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517791085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517791084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034742370}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517791086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517791084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Separate the materials.
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Separe os materiais
+    Object: {fileID: 0}
 --- !u!1 &1551337438
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,7 +6685,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: English
-    Text: Here is your score
+    Text: "\rThis was your performance level"
     Object: {fileID: 0}
   - Language: Portuguese
     Text: "Este foi o seu n\xEDvel de desempenho"
@@ -6723,6 +7237,7 @@ GameObject:
   - component: {fileID: 1983841317}
   - component: {fileID: 1983841319}
   - component: {fileID: 1983841318}
+  - component: {fileID: 1983841320}
   m_Layer: 5
   m_Name: TXT_Vida
   m_TagString: Untagged
@@ -6782,7 +7297,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Erros
+  m_Text: Vida
 --- !u!222 &1983841319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6791,6 +7306,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983841316}
   m_CullTransparentMesh: 0
+--- !u!114 &1983841320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983841316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Vida
+  FallbackText: Erros
 --- !u!1 &1986520633
 GameObject:
   m_ObjectHideFlags: 0
@@ -6903,6 +7432,12 @@ Transform:
   - {fileID: 506172851}
   - {fileID: 1813603204}
   - {fileID: 1638144629}
+  - {fileID: 596629091}
+  - {fileID: 215700775}
+  - {fileID: 1371477073}
+  - {fileID: 1517791085}
+  - {fileID: 324006764}
+  - {fileID: 638325056}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7275,6 +7810,7 @@ GameObject:
   - component: {fileID: 2080436981}
   - component: {fileID: 2080436983}
   - component: {fileID: 2080436982}
+  - component: {fileID: 2080436984}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7343,6 +7879,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080436980}
   m_CullTransparentMesh: 0
+--- !u!114 &2080436984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080436980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: voltarMenu
+  FallbackText: 
 --- !u!1 &2081670883
 GameObject:
   m_ObjectHideFlags: 0
@@ -7931,6 +8481,63 @@ PrefabInstance:
       objectReference: {fileID: 37441217}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d733ce4bd1c6aea4d9f6877985f927bc, type: 3}
+--- !u!1 &1962124062910456205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962124061271865319, guid: d733ce4bd1c6aea4d9f6877985f927bc, type: 3}
+  m_PrefabInstance: {fileID: 1962124062910456204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962124062910456206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962124061615913290, guid: d733ce4bd1c6aea4d9f6877985f927bc, type: 3}
+  m_PrefabInstance: {fileID: 1962124062910456204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962124062910456207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962124061266933957, guid: d733ce4bd1c6aea4d9f6877985f927bc, type: 3}
+  m_PrefabInstance: {fileID: 1962124062910456204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962124062910456208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962124062910456205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: voltarMenu
+  FallbackText: 
+--- !u!114 &1962124062910456209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962124062910456206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Fail2
+  FallbackText: 
+--- !u!114 &1962124062910456210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962124062910456207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Fail
+  FallbackText: 
 --- !u!224 &3754514159667668136 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 154521872249819772, guid: eee1015e2237dcf4bb9b70aa79a92864, type: 3}
@@ -8146,6 +8753,63 @@ PrefabInstance:
       objectReference: {fileID: 37441217}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
+--- !u!1 &5194418815733158912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5194418814867845291, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
+  m_PrefabInstance: {fileID: 5194418815733158911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5194418815733158913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5194418815616006801, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
+  m_PrefabInstance: {fileID: 5194418815733158911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5194418815733158914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5194418815269234841, guid: 260452e49f4d69744ba1291c5017dcd0, type: 3}
+  m_PrefabInstance: {fileID: 5194418815733158911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5194418815733158915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194418815733158912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Prosseguir
+  FallbackText: 
+--- !u!114 &5194418815733158916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194418815733158913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: sucess2
+  FallbackText: 
+--- !u!114 &5194418815733158917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194418815733158914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: sucess
+  FallbackText: 
 --- !u!1001 &5672937956430946741
 PrefabInstance:
   m_ObjectHideFlags: 0
