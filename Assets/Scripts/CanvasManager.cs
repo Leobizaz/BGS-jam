@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using DG.Tweening;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject fadeOut;
 
     TimeSpan timeSpan;
-
+    AudioSource audioS;
     private void Awake()
     {
         levelDone = false;
@@ -29,9 +30,11 @@ public class CanvasManager : MonoBehaviour
     public GameObject failScreen;
 
     public float startTime;
+    bool once;
 
     private void Start()
     {
+        audioS = GetComponent<AudioSource>();
         startTime = Time.timeSinceLevelLoad;
     }
 
@@ -71,6 +74,7 @@ public class CanvasManager : MonoBehaviour
             }
             finalTimeDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
+            audioS.DOFade(0, 3);
         }
     }
 

@@ -16354,7 +16354,7 @@ MonoBehaviour:
   gravCageCol: {fileID: 1631917545}
   CageBanish: {fileID: 2009965865}
   shieldAnim: {fileID: 351297512}
-  canvas: {fileID: 0}
+  canvas: {fileID: 1372763722}
   popupLose: {fileID: 1846110203}
   vida1: {fileID: 1193456676}
   vida2: {fileID: 224357651}
