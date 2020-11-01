@@ -30,6 +30,10 @@ public class SegundoMinigameManager : MonoBehaviour
     public GameObject wrong2;
     public GameObject wrong3;
 
+    public GameObject bacia1;
+    public GameObject bacia2;
+    public GameObject bacia3;
+
     public Text timerDisplay;
     public Text finalTimeDisplay;
     TimeSpan timeSpan;
@@ -116,6 +120,20 @@ public class SegundoMinigameManager : MonoBehaviour
     public void WrongTreco(int index)
     {
         wrongs++;
+
+        switch (index)
+        {
+            case 1:
+                bacia1.GetComponent<Animator>().Play("baciashake");
+                break;
+            case 2:
+                bacia2.GetComponent<Animator>().Play("baciashake");
+                break;
+            case 3:
+                bacia3.GetComponent<Animator>().Play("baciashake");
+                break;
+
+        }
 
         if(wrongs == 1)
         {
