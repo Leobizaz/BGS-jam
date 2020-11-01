@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private float jumpCooldown;
     private bool jumpBlock;
     //referencias publicas
+    public Animator playerAnim;
     public GameObject playerRenderer;
 
     //referencias privadas
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Pulo();
+
     }
 
     private void FixedUpdate()
@@ -51,7 +53,8 @@ public class PlayerController : MonoBehaviour
         Movimentação();
         SquashStretch();
         RenderRotation();
-        
+        if (isMoving) playerAnim.SetBool("isMoving", true); else playerAnim.SetBool("isMoving", false);
+        if (playerCollision.onGround || playerCollision.onGroundCoyote) playerAnim.SetBool("isGrounded", true); else playerAnim.SetBool("isGrounded", false);
     }
 
     private void Pulo()
@@ -77,19 +80,27 @@ public class PlayerController : MonoBehaviour
 
     private void Movimentação()
     {
+        if (isMoving)
+        {
+            if (rb.velocity.x <= 0)
+            {
+                playerRenderer.transform.localScale = new Vector3(-1, 1, 1);
+                facingLeft = true;
+                facingRight = false;
+                return;
+            }
+            else if (rb.velocity.x >= 0)
+            {
+                playerRenderer.transform.localScale = new Vector3(1, 1, 1);
+                facingRight = true;
+                facingLeft = false;
+                return;
+            }
+        }
 
-        if(rb.velocity.x <= 0 && isMoving)
-        {
-            playerRenderer.transform.localScale = new Vector3(-1, 1, 1);
-            facingLeft = true;
-            facingRight = false;
-        }
-        else if (isMoving)
-        {
-            playerRenderer.transform.localScale = new Vector3(1, 1, 1);
-            facingRight = true;
-            facingLeft = false;
-        }
+
+
+
 
         //if (!playerCollision.onGround) acceleration = Mathf.SmoothDamp(acceleration, 0, ref yVelocity, 0.1f);
         //else acceleration = 0.04f;
@@ -115,6 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         //playerCollision.coyote = true;
         playerCollision.onGroundCoyote = false;
+        playerAnim.Play("jump");
         wantToJump = false;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += Vector2.up * jumpForce;
@@ -166,10 +178,18 @@ public class PlayerController : MonoBehaviour
         {
             if (!playerCollision.onAir && !hasSquashed)
             {
+                CancelInvoke("Cu");
+                Invoke("Cu", 0.5f);
+                renderAnimator.enabled = true;
                 renderAnimator.Play("squash");
                 hasSquashed = true;
             }
         }
+    }
+
+    void Cu()
+    {
+        renderAnimator.enabled = false;
     }
 
 }
