@@ -50,9 +50,11 @@ public class ShipController : MonoBehaviour
     //referencias privadas
     Rigidbody2D rb;
     HingeJoint2D GravAnchorHinge;
+    AudioSource audioS;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioS = GetComponent<AudioSource>();
         GravAnchorHinge = GetComponent<HingeJoint2D>();
     }
 
@@ -94,10 +96,15 @@ public class ShipController : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 isMoving = true;
+                if (!audioS.isPlaying) audioS.Play();
+
+                audioS.pitch = Mathf.Lerp(0.6f, 1.6f, Mathf.InverseLerp(0.5f, 20, cursorDistance));
+
                 if (!FX_Thruster.isPlaying) FX_Thruster.Play();
             }
             else
             {
+                if (audioS.isPlaying) audioS.Stop();
                 if (FX_Thruster.isPlaying) FX_Thruster.Stop();
                 isMoving = false;
                 Freios();
@@ -111,6 +118,7 @@ public class ShipController : MonoBehaviour
         }
         else
         {
+            audioS.Stop();
             isMoving = false;
         }
 
