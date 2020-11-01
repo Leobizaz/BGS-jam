@@ -13,7 +13,7 @@ public class GameEvents : MonoBehaviour
 
     public event Action<float> onCollectCargo;
     public event Action<float> onLoseCargo;
-    public event Action<string> onCollectTreco;
+    public event Action<int> onCollectTreco;
     public event Action<int> onCollectWrong;
     public event Action onGameStart;
     public event Action<string> onDestroyCaixa;
@@ -42,11 +42,11 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    public void collectTreco(string tipo)
+    public void collectTreco(int index)
     {
         if(onCollectTreco != null)
         {
-            onCollectTreco(tipo);
+            onCollectTreco(index);
         }
     }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class SegundoMinigameManager : MonoBehaviour
 {
@@ -41,10 +42,10 @@ public class SegundoMinigameManager : MonoBehaviour
     public Text finalTimeDisplay;
     TimeSpan timeSpan;
     float startTime;
-
+    AudioSource audioS;
     private void Awake()
     {
-        
+        audioS = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -119,6 +120,7 @@ public class SegundoMinigameManager : MonoBehaviour
                 star3.SetActive(false);
             }
             finalTimeDisplay.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            audioS.DOFade(0, 3);
         }
     }
 
@@ -210,9 +212,23 @@ public class SegundoMinigameManager : MonoBehaviour
         }
     }
 
-    public void TrecoColetado(string tipo)
+    public void TrecoColetado(int index)
     {
         trecosColetados++;
+
+        switch (index)
+        {
+            case 1:
+                bacia1.GetComponent<Animator>().Play("baciashake2");
+                break;
+            case 2:
+                bacia2.GetComponent<Animator>().Play("baciashake2");
+                break;
+            case 3:
+                bacia3.GetComponent<Animator>().Play("baciashake2");
+                break;
+
+        }
     }
 
 
