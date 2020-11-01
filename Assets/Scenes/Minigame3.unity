@@ -784,6 +784,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &51377070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51377071}
+  - component: {fileID: 51377072}
+  m_Layer: 0
+  m_Name: resultados finais
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51377071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51377070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &51377072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51377070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'final score:'
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: 'resultados finais:'
+    Object: {fileID: 0}
 --- !u!1 &55638340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075407868292200, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075407868292201, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4397,6 +4448,57 @@ Transform:
   m_Father: {fileID: 958179245}
   m_RootOrder: 114
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &224747276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224747277}
+  - component: {fileID: 224747278}
+  m_Layer: 0
+  m_Name: Step 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224747277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224747276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224747278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224747276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Step 2
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Etapa 2
+    Object: {fileID: 0}
 --- !u!1 &226932463
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,7 +5547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &319988951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5749,6 +5851,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &340100109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340100110}
+  - component: {fileID: 340100111}
+  m_Layer: 0
+  m_Name: Voltarmenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340100110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340100109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &340100111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340100109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Go back to menu
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Voltar ao menu
+    Object: {fileID: 0}
 --- !u!1 &351454860
 GameObject:
   m_ObjectHideFlags: 0
@@ -9104,6 +9257,7 @@ GameObject:
   - component: {fileID: 541576361}
   - component: {fileID: 541576363}
   - component: {fileID: 541576362}
+  - component: {fileID: 541576364}
   m_Layer: 5
   m_Name: etapa1
   m_TagString: Untagged
@@ -9167,7 +9321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Etapa 1
+  m_Text: Step 1
 --- !u!222 &541576363
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9176,6 +9330,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541576360}
   m_CullTransparentMesh: 0
+--- !u!114 &541576364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541576360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Step 1
+  FallbackText: Etapa 1
 --- !u!1 &541947487
 GameObject:
   m_ObjectHideFlags: 0
@@ -13707,6 +13875,7 @@ GameObject:
   - component: {fileID: 832520579}
   - component: {fileID: 832520581}
   - component: {fileID: 832520580}
+  - component: {fileID: 832520582}
   m_Layer: 5
   m_Name: etapa3
   m_TagString: Untagged
@@ -13770,7 +13939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Etapa 3
+  m_Text: Step 3
 --- !u!222 &832520581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13779,6 +13948,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832520578}
   m_CullTransparentMesh: 0
+--- !u!114 &832520582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832520578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Step 3
+  FallbackText: Etapa 3
 --- !u!1 &835728097
 GameObject:
   m_ObjectHideFlags: 0
@@ -16364,7 +16547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mova-se com \"WASD\" | aperte \"ESPA\xC7O\" para pular"
+  m_Text: Move with "WASD" | press "SPACEBAR" to jump
 --- !u!222 &1001328731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17135,6 +17318,7 @@ GameObject:
   - component: {fileID: 1039928552}
   - component: {fileID: 1039928554}
   - component: {fileID: 1039928553}
+  - component: {fileID: 1039928555}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -17194,9 +17378,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Obrigado por jogar!
+  m_Text: 'Thanks for playing!
 
-    Tente conseguir todas as estrelas '
+    Try to get all the stars'
 --- !u!222 &1039928554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17205,6 +17389,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039928551}
   m_CullTransparentMesh: 0
+--- !u!114 &1039928555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039928551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Obrigado por jogar
+  FallbackText: 'Obrigado por jogar!
+
+    Tente conseguir todas as estrelas '
 --- !u!1 &1043603784
 GameObject:
   m_ObjectHideFlags: 0
@@ -18719,6 +18919,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1144828020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1144828021}
+  - component: {fileID: 1144828022}
+  m_Layer: 0
+  m_Name: Step 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1144828021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144828020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144828022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144828020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Step 3
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Etapa 3
+    Object: {fileID: 0}
 --- !u!1 &1149325286
 GameObject:
   m_ObjectHideFlags: 0
@@ -19064,7 +19315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1162460379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19368,6 +19619,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1190518128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190518129}
+  - component: {fileID: 1190518130}
+  m_Layer: 0
+  m_Name: Obrigado por jogar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190518129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190518128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190518130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190518128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Thanks for playing!
+
+      Try to get all the stars'
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: 'Obrigado por jogar!
+
+      Tente conseguir todas as estrelas'
+    Object: {fileID: 0}
 --- !u!1 &1193376017
 GameObject:
   m_ObjectHideFlags: 0
@@ -19530,7 +19836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1193517819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20358,7 +20664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1259878134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22095,7 +22401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376337658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23111,6 +23417,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1464213749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464213750}
+  - component: {fileID: 1464213751}
+  m_Layer: 0
+  m_Name: Game over
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464213750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464213749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464213751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464213749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Game Over
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Fim de jogo
+    Object: {fileID: 0}
 --- !u!1 &1466673738
 GameObject:
   m_ObjectHideFlags: 0
@@ -23571,6 +23928,7 @@ GameObject:
   - component: {fileID: 1495937613}
   - component: {fileID: 1495937615}
   - component: {fileID: 1495937614}
+  - component: {fileID: 1495937616}
   m_Layer: 5
   m_Name: Text (4)
   m_TagString: Untagged
@@ -23630,7 +23988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fim de jogo
+  m_Text: Game Over
 --- !u!222 &1495937615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23639,6 +23997,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495937612}
   m_CullTransparentMesh: 0
+--- !u!114 &1495937616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495937612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Game over
+  FallbackText: Fim de jogo
+--- !u!1 &1499419051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499419052}
+  - component: {fileID: 1499419053}
+  m_Layer: 0
+  m_Name: Step 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499419052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499419051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032800331}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499419053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499419051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Step 1
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Etapa 1
+    Object: {fileID: 0}
 --- !u!1 &1508223388
 GameObject:
   m_ObjectHideFlags: 0
@@ -24061,6 +24484,7 @@ GameObject:
   - component: {fileID: 1548655601}
   - component: {fileID: 1548655603}
   - component: {fileID: 1548655602}
+  - component: {fileID: 1548655604}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -24120,7 +24544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar ao menu
+  m_Text: Go back to menu
 --- !u!222 &1548655603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24129,6 +24553,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548655600}
   m_CullTransparentMesh: 0
+--- !u!114 &1548655604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548655600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Voltarmenu
+  FallbackText: Voltar ao menu
 --- !u!1 &1552518398
 GameObject:
   m_ObjectHideFlags: 0
@@ -26760,7 +27198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1700727005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27390,7 +27828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1757709931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28319,6 +28757,7 @@ GameObject:
   - component: {fileID: 1861764991}
   - component: {fileID: 1861764993}
   - component: {fileID: 1861764992}
+  - component: {fileID: 1861764994}
   m_Layer: 5
   m_Name: Text (5)
   m_TagString: Untagged
@@ -28378,7 +28817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'resultados finais:'
+  m_Text: 'final score:'
 --- !u!222 &1861764993
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28387,6 +28826,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861764990}
   m_CullTransparentMesh: 0
+--- !u!114 &1861764994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861764990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: resultados finais
+  FallbackText: 'resultados finais:'
 --- !u!1 &1867063779
 GameObject:
   m_ObjectHideFlags: 0
@@ -29187,7 +29640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408177658913, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -29275,7 +29728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408554838519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075408664898456, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -29295,7 +29748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408924671002, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 420075409094569194, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
@@ -29360,7 +29813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409363206605, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -29514,7 +29967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Prox
-  FallbackText: 
+  FallbackText: "Pr\xF3ximo"
 --- !u!114 &1903069095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29528,7 +29981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Prox
-  FallbackText: 
+  FallbackText: "Pr\xF3ximo"
 --- !u!114 &1903069096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29542,7 +29995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Prox
-  FallbackText: 
+  FallbackText: "Pr\xF3ximo"
 --- !u!114 &1903069097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29556,7 +30009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Prox
-  FallbackText: 
+  FallbackText: "Pr\xF3ximo"
 --- !u!1 &1903069098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 420075407496287258, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
@@ -29600,7 +30053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo8
-  FallbackText: 
+  FallbackText: "Imagina, eu assim como todos trabalhamos unidos para alcan\xE7ar
+    o melhor para todos da cidadela."
 --- !u!114 &1903069105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29614,7 +30068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo7
-  FallbackText: 
+  FallbackText: "Sim, mas gra\xE7as a voc\xEA conseguimos o restante dos materiais
+    para a expans\xE3o, agora n\xE3o teremos mais problemas com superpopula\xE7\xE3o."
 --- !u!114 &1903069106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29628,7 +30083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo7
-  FallbackText: 
+  FallbackText: "Sim, mas gra\xE7as a voc\xEA conseguimos o restante dos materiais
+    para a expans\xE3o, agora n\xE3o teremos mais problemas com superpopula\xE7\xE3o."
 --- !u!114 &1903069107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29642,7 +30098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo6
-  FallbackText: 
+  FallbackText: Imagina, todos fazemos o possivel para ajudar.
 --- !u!114 &1903069108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29656,7 +30112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo5
-  FallbackText: 
+  FallbackText: "Ainda bem que voc\xEA nos ajudou."
 --- !u!114 &1903069109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29670,7 +30126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationName: Dialogo5
-  FallbackText: 
+  FallbackText: "Ainda bem que voc\xEA nos ajudou."
 --- !u!1 &1914404658
 GameObject:
   m_ObjectHideFlags: 0
@@ -30379,7 +30835,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Entregues
+  m_Text: Delivered
 --- !u!222 &1949986387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31289,6 +31745,7 @@ GameObject:
   - component: {fileID: 2023648674}
   - component: {fileID: 2023648676}
   - component: {fileID: 2023648675}
+  - component: {fileID: 2023648677}
   m_Layer: 5
   m_Name: etapa2
   m_TagString: Untagged
@@ -31352,7 +31809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Etapa 2
+  m_Text: Step 2
 --- !u!222 &2023648676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31361,6 +31818,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023648673}
   m_CullTransparentMesh: 0
+--- !u!114 &2023648677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023648673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Step 2
+  FallbackText: Etapa 2
 --- !u!1 &2027495311
 GameObject:
   m_ObjectHideFlags: 0
@@ -31603,6 +32074,13 @@ Transform:
   - {fileID: 1575331282}
   - {fileID: 1995481843}
   - {fileID: 2120218040}
+  - {fileID: 1464213750}
+  - {fileID: 51377071}
+  - {fileID: 1499419052}
+  - {fileID: 224747277}
+  - {fileID: 1144828021}
+  - {fileID: 1190518129}
+  - {fileID: 340100110}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31677,7 +32155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Entregue os materiais
+  m_Text: Deliver the materials
 --- !u!222 &2041415764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32511,7 +32989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2103162061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32799,7 +33277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2125837593
 RectTransform:
   m_ObjectHideFlags: 0
