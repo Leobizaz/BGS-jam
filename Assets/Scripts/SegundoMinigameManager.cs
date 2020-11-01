@@ -171,7 +171,7 @@ public class SegundoMinigameManager : MonoBehaviour
         Invoke("LoadNext", 2);
     }
 
-    void VoltarMenu()
+    public void VoltarMenu()
     {
         SceneManager.LoadScene("Menu");
     }
