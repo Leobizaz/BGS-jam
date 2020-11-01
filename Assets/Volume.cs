@@ -6,12 +6,20 @@ public class Volume : MonoBehaviour
 {
     AudioSource audioS;
 
-    [Range(0, 1)]
-    public static float globalvolume = 1;
+    public static float globalvolume;
+    public bool menu;
 
     private void Start()
     {
         audioS = GetComponent<AudioSource>();
         audioS.volume = globalvolume;
+    }
+
+    private void Update()
+    {
+        if (menu)
+        {
+            audioS.volume = globalvolume;
+        }
     }
 }
