@@ -12,6 +12,7 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
         indicator.SetActive(false);
     }
     void Update()
