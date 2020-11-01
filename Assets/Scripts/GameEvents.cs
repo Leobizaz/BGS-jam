@@ -16,6 +16,15 @@ public class GameEvents : MonoBehaviour
     public event Action<string> onCollectTreco;
     public event Action<int> onCollectWrong;
     public event Action onGameStart;
+    public event Action<string> onDestroyCaixa;
+
+    public void destroyCaixa(string tag)
+    {
+        if(onDestroyCaixa != null)
+        {
+            onDestroyCaixa(tag);
+        }
+    }
 
     public void startGame()
     {

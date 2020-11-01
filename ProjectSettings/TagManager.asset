@@ -11,6 +11,9 @@ TagManager:
   - Minerio
   - Metal
   - Materia
+  - Triangulo
+  - Quadrado
+  - Circulo
   layers:
   - Default
   - TransparentFX
@@ -27,8 +30,8 @@ TagManager:
   - Sacola
   - Player
   - Wreck
-  - 
-  - 
+  - Caixas
+  - NPC
   - 
   - 
   - 
