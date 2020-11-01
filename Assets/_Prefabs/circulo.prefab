@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 7373043806431847317}
   - component: {fileID: 7373043806431847316}
   - component: {fileID: 7373043806431847323}
-  m_Layer: 15
+  m_Layer: 23
   m_Name: circulo
   m_TagString: Circulo
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ Rigidbody2D:
   m_Mass: 60
   m_LinearDrag: 4.23
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

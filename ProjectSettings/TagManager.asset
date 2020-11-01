@@ -33,12 +33,12 @@ TagManager:
   - Caixas
   - NPC
   - PostProcess
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC_Triangulo
+  - NPC_Quadrado
+  - NPC_Circulo
+  - Quadrado
+  - Triangulo
+  - Circulo
   - 
   - 
   - 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Playsound : MonoBehaviour
 {
+    public bool random;
     public bool onEnable;
     AudioSource audioS;
     private void OnEnable()
@@ -18,6 +19,14 @@ public class Playsound : MonoBehaviour
     public void PlaySound()
     {
         audioS = GetComponent<AudioSource>();
-        audioS.Play();
+        if (random)
+        {
+            audioS.pitch = Random.Range(0.7f, 1.4f);
+            audioS.Play();
+        }
+        else
+        {
+            audioS.Play();
+        }
     }
 }
