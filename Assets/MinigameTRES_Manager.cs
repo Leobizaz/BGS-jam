@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class MinigameTRES_Manager : MonoBehaviour
 {
@@ -23,16 +24,19 @@ public class MinigameTRES_Manager : MonoBehaviour
     public GameObject star2;
     public GameObject star3;
 
-    public Text objetivoDisplay;
     public Text timerDisplay;
     public Text finalTimeDisplay;
     public GameObject fadeOut;
+    AudioSource audioS;
+    bool once;
+    
 
     float startTime;
     TimeSpan timeSpan;
 
     private void Start()
     {
+        audioS = GetComponent<AudioSource>();
         level3Done = false;
         startTime = Time.timeSinceLevelLoad;
     }
@@ -58,6 +62,9 @@ public class MinigameTRES_Manager : MonoBehaviour
         }
         else
         {
+            audioS.DOFade(0, 3);
+
+
             if (timeSpan.Seconds <= 26)
             {
                 star1.SetActive(true);
