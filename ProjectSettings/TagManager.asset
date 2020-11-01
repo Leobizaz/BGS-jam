@@ -8,6 +8,9 @@ TagManager:
   - CageCenter
   - Hazard
   - Coletavel
+  - Minerio
+  - Metal
+  - Materia
   layers:
   - Default
   - TransparentFX
