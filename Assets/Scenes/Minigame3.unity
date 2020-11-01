@@ -2349,7 +2349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075407868292200, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075407868292201, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2453,15 +2453,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 420075408482961617, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 233
+      value: -207
+      objectReference: {fileID: 0}
+    - target: {fileID: 420075408482961617, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 420075408482961646, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
@@ -2491,9 +2495,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: "Voc\xEA pode levar as caixas com materiais para as salas de produ\xE7\xE3o? "
       objectReference: {fileID: 0}
+    - target: {fileID: 420075409094569196, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 420075409299794518, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -2509,7 +2521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 420075409363206605, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
@@ -2529,15 +2541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 420075409506996646, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
-      value: "Hey,!!! Voc\xEA pode me ajudar?"
+      value: "Hey!!! Voc\xEA pode me ajudar?"
       objectReference: {fileID: 0}
     - target: {fileID: 420075409506996648, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
@@ -2545,7 +2557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409506996649, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 233
+      value: 226
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -2561,11 +2573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477486, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2590,6 +2602,14 @@ PrefabInstance:
     - target: {fileID: 420075409508477486, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773567351335465729, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806908671335156541, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
@@ -18422,7 +18442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1200701983
 Transform:
   m_ObjectHideFlags: 0
@@ -26720,8 +26740,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075407496287256, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
-      value: "Obrigado, mas voc\xEA tem que agradecer essa dlc de jogador!!!\nVoc\xEA
-        \xE9 Lindo."
+      value: "Imagina, eu assim como todos trabalhamos unidos para alcan\xE7ar o
+        melhor para todos da cidadela."
       objectReference: {fileID: 0}
     - target: {fileID: 420075407868292200, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Name
@@ -26817,7 +26837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408177658913, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -26833,19 +26853,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 420075408315676247, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -451
       objectReference: {fileID: 0}
     - target: {fileID: 420075408482961646, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
       value: Imagina, todos fazemos o possivel para ajudar.
       objectReference: {fileID: 0}
+    - target: {fileID: 420075408554838519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 420075408664898457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
       value: "Ainda bem que voc\xEA nos ajudou."
+      objectReference: {fileID: 0}
+    - target: {fileID: 420075408924671002, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075409094569194, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
@@ -26854,7 +26882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -26870,11 +26898,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409299794519, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -451
       objectReference: {fileID: 0}
     - target: {fileID: 420075409363206605, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_LocalScale.x
@@ -26890,11 +26918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 420075409495900503, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -451
       objectReference: {fileID: 0}
     - target: {fileID: 420075409506996646, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_Text
@@ -26914,11 +26942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477457, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -481
+      value: -451
       objectReference: {fileID: 0}
     - target: {fileID: 420075409508477486, guid: a3eb09f430f2fda43b299847d65990be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
